@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, VStack, Text, Box } from "@chakra-ui/react";
 import lbg from "../images/lbg.jpeg";
-import FullScreenSection from "./FullScreenSection";
+//import FullScreenSection from "./FullScreenSection";
 
 const hero = "Claire Yau";
 const subhero = "Psychology Graduate";
@@ -16,7 +16,7 @@ const LandingSection = () => {
       justifyContent="space-between"
       minHeight="100vh"
       color="white"
-      bg={`linear-gradient(to bottom, rgba(32,32,32,0.3), rgba(32,32,32,0.4)), url(${lbg})`}
+      bg={`linear-gradient(to bottom, rgba(32,32,32,0.2), rgba(32,32,32,0.2)), url(${lbg})`}
       bgSize="cover"
     >
       <VStack
