@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
-import ScrollToTopButton from "./components/ScrollToTopButton";
 import BioSection from "./components/BioSection"
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
           <Header />
           <LandingSection />
           <BioSection />
-          <ScrollToTopButton />
           <Footer />
         </main>
       </AlertProvider>
