@@ -3,14 +3,11 @@ import { Heading, VStack, Text, Box } from "@chakra-ui/react";
 import lbg from "../images/lbg.jpeg";
 //import FullScreenSection from "./FullScreenSection";
 
-const hero = "Claire Yau";
-const subhero = "Psychology Graduate";
-
 const LandingSection = () => {
   return (
     <Box
-      display='flex'
-      flex='1 1 auto'
+      display="flex"
+      flex="1 1 auto"
       py={20}
       px={5}
       justifyContent="space-between"
@@ -20,34 +17,34 @@ const LandingSection = () => {
       bgSize="cover"
     >
       <VStack
-        w='60%'
         spacing={5}
         p={5}
         alignItems="flex-start"
-        justifyContent='top'
+        justifyContent="top"
         position="relative"
       >
-        <Heading fontSize={'9xl'}>
-          {hero}
-        </Heading>
-        <Text fontSize={'4xl'}>
-          {subhero}
-        </Text>
+        <Heading fontSize={"9xl"}>Claire Yau</Heading>
+        <Text fontSize={"4xl"}>Psychology Graduate</Text>
       </VStack>
       <VStack
-        w='40%'
+        w="40%"
         spacing={5}
         p={5}
         alignItems="flex-end"
-        justifyContent='flex-end'
+        justifyContent="flex-end"
         position="relative"
       >
-        <Text fontSize={'md'}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        <Text fontSize={"md"}>
+          Passionate at becoming a clinical psychologist, where
+          she can help individuals overcome mental health challenges and live
+          fulfilling lives. With her educational background in psychology and
+          her experience in patient care, Claire is dedicated to reducing the
+          stigma surrounding mental health and promoting access to psychological
+          services.
         </Text>
       </VStack>
     </Box>
-  )
+  );
 };
 
 export default LandingSection;
