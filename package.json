@@ -1,7 +1,6 @@
 {
-  "name": "terry-lws.github.io",
+  "name": "claire-portfolio",
   "version": "0.1.0",
-  "homepage": "https://terry-lws.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
