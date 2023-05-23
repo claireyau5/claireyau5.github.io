@@ -9,10 +9,11 @@ const Bio = () => {
       backgroundColor="#efebe4"
       color="#383842"
       px={8}
-      py={20}
+      pt={20}
       alignItems="flex-start"
       justifyContent="center"
       spacing={8}
+      position="relative"
     >
       <VStack spacing={10}>
         <Heading as="h1">Who Am I?</Heading>
@@ -22,18 +23,12 @@ const Bio = () => {
           alignItems="center"
           gap={20}
         >
-          <Box
-            //w={{ base: "none", lg: '40%' }}
-            w="50%"
-            p={2}
-            justifyContent="center"
-            alignItems="center"
-          >
+          <Box w="50%" p={2} justifyContent="center" alignItems="center">
             <Image
               src={require("../images/img5.jpeg")}
               border="solid gray 2px"
               p="10px"
-              boxShadow=" 5px 10px #888888"
+              boxShadow="5px 10px #888888"
             />
           </Box>
           <Box w="50%">
@@ -71,6 +66,7 @@ const Bio = () => {
             </Text>
           </Box>
         </Flex>
+        
       </VStack>
     </FullScreenSection>
   );
