@@ -2,8 +2,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import Footer from "./components/Footer";
-import BioSection from "./components/BioSection"
-import CertificateSection from "./components/CertificateSection";
+import Bio from "./components/Bio"
+import Certificate from "./components/Certificate";
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
         <main>
           <Header />
           <LandingSection />
-          <BioSection />
-          <CertificateSection />
+          <Bio />
+          
+          <Certificate />
           <Footer />
         </main>
     </ChakraProvider>
