@@ -100,8 +100,11 @@ const NavItem = () => {
                       <a href="#bio" onClick={handleClick("bio")}>
                         About Me
                       </a>
-                      <a href="#projects" onClick={handleClick("projects")}>
-                        Expereince
+                      <a
+                        href="#certificate"
+                        onClick={handleClick("certificate")}
+                      >
+                        Certification
                       </a>
                     </VStack>
                   </Box>
@@ -109,7 +112,7 @@ const NavItem = () => {
               </Box>
             </Collapse>
           </nav>
-          <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+          {/* <HStack spacing={8} display={{ base: "none", md: "flex" }}>
             <CopyToClipboard
               text={socials.find((p) => p.icon === faEnvelope).url}
             >
@@ -132,7 +135,7 @@ const NavItem = () => {
                 </Tooltip>
               </div>
             </CopyToClipboard>
-          </HStack>
+          </HStack> */}
         </HStack>
       </nav>
       <nav>
@@ -143,8 +146,8 @@ const NavItem = () => {
           <a href="#skills" onClick={handleClick("skills")}>
             Skills
           </a>
-          <a href="#projects" onClick={handleClick("projects")}>
-            Projects
+          <a href="#certificate" onClick={handleClick("certificate")}>
+            Certification
           </a>
         </HStack>
       </nav>
