@@ -23,8 +23,8 @@ const LandingSection = () => {
         justifyContent="top"
         position="relative"
       >
-        <Heading fontSize={"9xl"}>Claire Yau</Heading>
-        <Text fontSize={"4xl"}>Psychology Graduate</Text>
+        <Heading fontFamily={'Alex Brush, cursive'} fontSize={"9xl"}>Claire Yau</Heading>
+        <Heading fontSize={"4xl"}>Psychology Graduate</Heading>
       </VStack>
       <VStack
         w="40%"
