@@ -75,28 +75,6 @@ const NavItem = () => {
                 <HStack spacing={4}>
                   <Box pb={4} overflow="hidden" transition="0.3s ease">
                     <VStack spacing={4} alignItems="flex-start">
-                      <CopyToClipboard
-                        text={socials.find((p) => p.icon === faEnvelope).url}
-                      >
-                        <div>
-                          <Tooltip label="Copy email to clipboard">
-                            <Text
-                              onClick={() =>
-                                toast({
-                                  title: "Email copied!",
-                                  status: "success",
-                                  duration: 1500,
-                                  position: "top",
-                                  isClosable: true,
-                                })
-                              }
-                              cursor="pointer"
-                            >
-                              claire@claireyau.com
-                            </Text>
-                          </Tooltip>
-                        </div>
-                      </CopyToClipboard>
                       <a href="#bio" onClick={handleClick("bio")}>
                         About Me
                       </a>
@@ -112,39 +90,12 @@ const NavItem = () => {
               </Box>
             </Collapse>
           </nav>
-          {/* <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-            <CopyToClipboard
-              text={socials.find((p) => p.icon === faEnvelope).url}
-            >
-              <div>
-                <Tooltip label="Copy email to clipboard">
-                  <Text
-                    onClick={() =>
-                      toast({
-                        title: "Email copied!",
-                        status: "success",
-                        duration: 1500,
-                        position: "top",
-                        isClosable: true,
-                      })
-                    }
-                    cursor="pointer"
-                  >
-                    claire@claireyau.com
-                  </Text>
-                </Tooltip>
-              </div>
-            </CopyToClipboard>
-          </HStack> */}
         </HStack>
       </nav>
       <nav>
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <a href="#bio" onClick={handleClick("bio")}>
             About Me
-          </a>
-          <a href="#skills" onClick={handleClick("skills")}>
-            Skills
           </a>
           <a href="#certificate" onClick={handleClick("certificate")}>
             Certification
