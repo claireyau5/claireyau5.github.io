@@ -9,13 +9,13 @@ const Bio = () => {
       backgroundColor="#efebe4"
       color="#383842"
       px={8}
-      pt={20}
+      py={10}
       alignItems="flex-start"
       justifyContent="center"
       spacing={8}
       position="relative"
     >
-      <VStack spacing={10}>
+      <VStack spacing='20'>
         <Heading as="h1">Who Am I?</Heading>
         <Flex
           justifyContent="center"
@@ -25,7 +25,7 @@ const Bio = () => {
         >
           <Box w="50%" p={2} justifyContent="center" alignItems="center">
             <Image
-              src={require("../images/img5.jpeg")}
+              src={require("../images/grad.jpeg")}
               border="solid gray 2px"
               p="10px"
               boxShadow="5px 10px #888888"
@@ -49,6 +49,15 @@ const Bio = () => {
               she hopes to work directly with patients to provide evidence-based
               treatments and interventions.
             </Text>
+          </Box>
+        </Flex>
+        <Flex
+          justifyContent="center"
+          justifyItems="center"
+          alignItems="center"
+          gap={20}
+        >
+          <Box w="50%">
             <Text py={3}>
               As an active volunteer with organizations like Raise Foundation
               and Lifeline, Claire puts her knowledge into practice by serving
@@ -65,8 +74,15 @@ const Bio = () => {
               more mentally healthy society.
             </Text>
           </Box>
+          <Box w="50%" p={2} justifyContent="center" alignItems="center">
+            <Image
+              src={require("../images/headspace.jpeg")}
+              border="solid gray 2px"
+              p="10px"
+              boxShadow="5px 10px #888888"
+            />
+          </Box>
         </Flex>
-        
       </VStack>
     </FullScreenSection>
   );

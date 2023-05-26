@@ -44,7 +44,7 @@ const Certificate = () => {
         backgroundColor="#fdfdfd"
         color="#383842"
         px={8}
-        py={20}
+        py={10}
         alignItems="flex-start"
         justifyContent="center"
         spacing={8}
