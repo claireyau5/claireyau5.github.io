@@ -1,11 +1,9 @@
 import React from "react";
 import {
   Text,
-  Divider,
   Heading,
   VStack,
   Box,
-  Button,
   Image,
   Flex,
   Modal,
@@ -59,9 +57,9 @@ const Certificate = () => {
           >
             <Flex w="50%" justifyContent="center">
               <VStack spacing={5}>
-                <Heading as="h2" fontSize="3xl" textAlign="center">
+                <Text fontSize="3xl" fontWeight="600" textAlign="center">
                   CPR First Aid Certification
-                </Heading>
+                </Text>
               </VStack>
             </Flex>
             <Box
