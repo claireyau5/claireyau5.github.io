@@ -55,18 +55,13 @@ const Certificate = () => {
             justifyContent="center"
             justifyItems="center"
             alignItems="center"
+            gap={20}
           >
             <Flex w="50%" justifyContent="center">
               <VStack spacing={5}>
                 <Heading as="h2" fontSize="3xl" textAlign="center">
                   CPR First Aid Certification
                 </Heading>
-                <Button colorScheme="blue">
-                  <a href="certificate.pdf" download>
-                    <DownloadIcon />
-                    &nbsp;Download PDF
-                  </a>
-                </Button>
               </VStack>
             </Flex>
             <Box
