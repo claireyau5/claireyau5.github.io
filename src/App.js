@@ -8,7 +8,7 @@ import Certificate from "./components/Certificate";
 const theme = extendTheme({
   fonts: {
     body: 'Roboto, sans-serif',
-    heading: "Comic Sans MS, Comic Sans, cursive",
+    heading: 'Helvetica, sans-serif',
   },
 });
 
