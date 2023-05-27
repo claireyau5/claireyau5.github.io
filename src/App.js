@@ -16,7 +16,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
         <main>
-          {/* <Header /> */}
+          <Header />
           <LandingSection />
           <Bio />
           <Certificate />
