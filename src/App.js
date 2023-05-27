@@ -4,7 +4,7 @@ import LandingSection from "./components/LandingSection";
 import Footer from "./components/Footer";
 import Bio from "./components/Bio"
 import Certificate from "./components/Certificate";
-
+import Test from "./components/Test"
 const theme = extendTheme({
   fonts: {
     body: 'Roboto, sans-serif',
@@ -20,6 +20,7 @@ function App() {
           <LandingSection />
           <Bio />
           <Certificate />
+          {/* <Test /> */}
           <Footer />
         </main>
     </ChakraProvider>
