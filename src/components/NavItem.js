@@ -1,7 +1,4 @@
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   IconButton,
   Text,
@@ -15,17 +12,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-const socials = [
-  {
-    icon: faEnvelope,
-    url: "claire@claireyau.com",
-  },
-  {
-    icon: faLinkedin,
-    url: "https://www.linkedin.com/in/wai-shun-terence-lam-0a5b3b20b/",
-  },
-];
 
 const NavItem = () => {
   const handleClick = (anchor) => () => {
@@ -82,6 +68,18 @@ const NavItem = () => {
                         href="#certificate"
                         onClick={handleClick("certificate")}
                       >
+                        Experience
+                      </a>
+                      <a
+                        href="#certificate"
+                        onClick={handleClick("certificate")}
+                      >
+                        Researchh
+                      </a>
+                      <a
+                        href="#certificate"
+                        onClick={handleClick("certificate")}
+                      >
                         Certification
                       </a>
                     </VStack>
@@ -96,6 +94,12 @@ const NavItem = () => {
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <a href="#bio" onClick={handleClick("bio")}>
             About Me
+          </a>
+          <a href="#certificate" onClick={handleClick("certificate")}>
+            Experience
+          </a>
+          <a href="#certificate" onClick={handleClick("certificate")}>
+            Researchh
           </a>
           <a href="#certificate" onClick={handleClick("certificate")}>
             Certification
