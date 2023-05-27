@@ -13,12 +13,11 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#efebe4"
+      backgroundColor="#18181b"
       zIndex="1"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          color="#383842"
           px={{ md: 16, base: 8 }}
           py={4}
           justifyContent={{ md: "center", base: "flex-start" }}
