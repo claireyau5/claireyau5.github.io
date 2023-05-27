@@ -81,7 +81,7 @@ const Certificate = () => {
       >
         <Box w="100%" position="relative">
           <VStack spacing={10}>
-            <Heading as="h1">Certification</Heading>
+            <Heading as="h1">Certifications</Heading>
             <Flex justifyContent="center" alignItems="center" gap={20}>
               <Box
                 w={buttonBoxWidth}
