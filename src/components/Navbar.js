@@ -13,23 +13,31 @@ import {
 } from "@chakra-ui/react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const NavItem = () => {
-  const handleClick = (anchor) => () => {
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
+const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   const toast = useToast();
 
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const Items = [
+    {
+      name: "About Me",
+      sid: "#bio",
+    },
+    {
+      name: "Experience",
+      sid: "#experience",
+    },
+    {
+      name: "Research",
+      sid: "#research",
+    },
+    {
+      name: "Certifications",
+      sid: "#certificate",
+    },
+  ];
 
   return (
     <>
@@ -61,27 +69,9 @@ const NavItem = () => {
                 <HStack spacing={4}>
                   <Box pb={4} overflow="hidden" transition="0.3s ease">
                     <VStack spacing={4} alignItems="flex-start">
-                      <a href="#bio" onClick={handleClick("bio")}>
-                        About Me
-                      </a>
-                      <a
-                        href="#certificate"
-                        onClick={handleClick("certificate")}
-                      >
-                        Experience
-                      </a>
-                      <a
-                        href="#certificate"
-                        onClick={handleClick("certificate")}
-                      >
-                        Researchh
-                      </a>
-                      <a
-                        href="#certificate"
-                        onClick={handleClick("certificate")}
-                      >
-                        Certification
-                      </a>
+                      {Items.map((Item) => (
+                        <a href={Item.sid}>{Item.name}</a>
+                      ))}
                     </VStack>
                   </Box>
                 </HStack>
@@ -92,22 +82,13 @@ const NavItem = () => {
       </nav>
       <nav>
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-          <a href="#bio" onClick={handleClick("bio")}>
-            About Me
-          </a>
-          <a href="#certificate" onClick={handleClick("certificate")}>
-            Experience
-          </a>
-          <a href="#certificate" onClick={handleClick("certificate")}>
-            Researchh
-          </a>
-          <a href="#certificate" onClick={handleClick("certificate")}>
-            Certification
-          </a>
+          {Items.map((Item) => (
+            <a href={Item.sid}>{Item.name}</a>
+          ))}
         </HStack>
       </nav>
     </>
   );
 };
 
-export default NavItem;
+export default Navbar;
