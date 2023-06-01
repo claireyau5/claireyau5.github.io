@@ -1,5 +1,5 @@
 import { Box, HStack } from "@chakra-ui/react";
-import NavItem from "./NavItem";
+import Navbar from "./Navbar";
 
 const Header = () => {
 
@@ -23,7 +23,7 @@ const Header = () => {
           justifyContent={{ md: "center", base: "flex-start" }}
           alignItems={{ md: "center", base: "flex-start" }}
         >
-          <NavItem />
+          <Navbar />
         </HStack>
       </Box>
     </Box>
