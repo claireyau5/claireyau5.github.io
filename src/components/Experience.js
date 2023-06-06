@@ -1,145 +1,67 @@
-import React, { useState } from "react";
-import {
-  Text,
-  Heading,
-  VStack,
-  Box,
-  Image,
-  Flex,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalOverlay,
-  IconButton,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import React from "react";
 import FullScreenSection from "./FullScreenSection";
+import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
+import ExperienceItems from "./ExperienceItems";
 
-const certificates = [
+const experience = [
   {
-    title: "CPR First Aid",
-    imageSrc: require("../images/certificate.PNG"),
+    position: "Patient Journey Coordinator",
+    company: "The Melbourne Psychiatry Centre",
+    date: "Apr 2023 - Present",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Nunc mattis enim ut tellus elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin sagittis. Eget mauris pharetra et ultrices neque ornare aenean. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Adipiscing commodo elit at imperdiet. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. At elementum eu facilisis sed odio morbi. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing.",
+    imageSrc: require("../images/MPC_front.JPG"),
   },
   {
-    title: "Aboriginal and Torres Strait Islander Mental Health First Aid",
-    imageSrc: require("../images/ATSI_certificate.png"),
+    position: "Youth Mentor",
+    company: "Raise Foundation",
+    date: "Mar 2023 - Present",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Nunc mattis enim ut tellus elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin sagittis. Eget mauris pharetra et ultrices neque ornare aenean. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Adipiscing commodo elit at imperdiet. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. At elementum eu facilisis sed odio morbi. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing.",
+    imageSrc: require("../images/raise_foundation_logo.png"),
   },
   {
-    title: "Youth Mentor Training",
-    imageSrc: require("../images/YMT_certificate.png"),
+    position: "Lifeline Crisis Supporter",
+    company: "Lifeline Australia",
+    date: "Aug 2021 - Present",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Nunc mattis enim ut tellus elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin sagittis. Eget mauris pharetra et ultrices neque ornare aenean. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Adipiscing commodo elit at imperdiet. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. At elementum eu facilisis sed odio morbi. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing.",
+    imageSrc: require("../images/Lifeline_Logo.jpg"),
+  },
+  {
+    position: "Youth Reference Group Coordinator",
+    company: "headspace",
+    date: "Dec 2021 - Jan 2023",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Nunc mattis enim ut tellus elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin sagittis. Eget mauris pharetra et ultrices neque ornare aenean. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Adipiscing commodo elit at imperdiet. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. At elementum eu facilisis sed odio morbi. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing.",
+    imageSrc: require("../images/headspace_logo.jpg"),
   },
 ];
 
-const Certificate = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const totalCertificates = certificates.length;
-
-  const goToPrevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? totalCertificates - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCertificates);
-  };
-
-  const currentCertificate = certificates[currentIndex];
-
-  const imgaeBoxWidth = 0.8;
-
-  const buttonBoxWidth = (1 - imgaeBoxWidth) / 2;
-
+const Experience = () => {
   return (
-    <>
-      <FullScreenSection
-        id="certificate"
-        backgroundColor="#fdfdfd"
-        color="#383842"
-        px={8}
-        py={10}
-        alignItems="center"
-        justifyContent="center"
-        spacing={8}
-      >
-        <Box w="100%" position="relative">
-          <VStack spacing={10}>
-            <Heading as="h1">Certifications</Heading>
-            <Flex justifyContent="center" alignItems="center" gap={20}>
-              <Box
-                w={buttonBoxWidth}
-                p={2}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <IconButton
-                  color="#e2e8f0"
-                  backgroundColor="#383842"
-                  icon={<ChevronLeftIcon />}
-                  aria-label="Previous Slide"
-                  onClick={goToPrevSlide}
-                  disabled={totalCertificates <= 1}
-                  position="absolute"
-                  left="0"
-                  top="50%"
-                  transform="translateY(-50%)"
-                  _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
-                />
-              </Box>
-              <Box w="80%" p={2} justifyContent="center" alignItems="center">
-                <Image
-                  onClick={onOpen}
-                  cursor="pointer"
-                  src={currentCertificate.imageSrc}
-                  border="ridge #815a00 20px"
-                  maxW="100%"
-                  maxH="100%"
-                  objectFit="cover"
-                />
-                <Text fontWeight="600" textAlign="center" mt={5}>
-                  {currentCertificate.title}
-                </Text>
-                <Text fontSize="sm" fontWeight="600" textAlign="center" mt={2}>
-                  ({currentIndex + 1}/{totalCertificates})
-                </Text>
-                <Modal size="2xl" onClose={onClose} isOpen={isOpen} isCentered>
-                  <ModalOverlay />
-                  <ModalContent>
-                    <ModalBody>
-                      <Image src={currentCertificate.imageSrc} />
-                    </ModalBody>
-                  </ModalContent>
-                </Modal>
-              </Box>
-              <Box
-                w={buttonBoxWidth}
-                p={2}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <IconButton
-                  color="#e2e8f0"
-                  backgroundColor="#383842"
-                  icon={<ChevronRightIcon />}
-                  aria-label="Next Slide"
-                  onClick={goToNextSlide}
-                  disabled={totalCertificates <= 1}
-                  position="absolute"
-                  right="0"
-                  top="50%"
-                  transform="translateY(-50%)"
-                  _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
-                />
-              </Box>
-            </Flex>
-          </VStack>
-        </Box>
-      </FullScreenSection>
-    </>
+    <FullScreenSection
+      id="experience"
+      backgroundColor="#345b8f"
+      isDarkBackground
+      px={8}
+      py={20}
+      alignItems="center"
+      spacing={8}
+    >
+      <Heading as="h1">Experience</Heading>
+        {experience.map((experienceItem) => (
+          <ExperienceItems
+            key={experienceItem.position}
+            position={experienceItem.position}
+            company={experienceItem.company}
+            date={experienceItem.date}
+            description={experienceItem.description}
+            imageSrc={experienceItem.imageSrc}
+          />
+        ))}
+    </FullScreenSection>
   );
 };
 
-export default Certificate;
+export default Experience;
