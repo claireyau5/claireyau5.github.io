@@ -4,6 +4,7 @@ import LandingSection from "./components/LandingSection";
 import Footer from "./components/Footer";
 import Bio from "./components/Bio"
 import Certificate from "./components/Certificate";
+import Experience from "./components/Experience";
 
 const theme = extendTheme({
   fonts: {
@@ -19,6 +20,7 @@ function App() {
           <Header />
           <LandingSection />
           <Bio />
+          <Experience />
           <Certificate />
           <Footer />
         </main>
