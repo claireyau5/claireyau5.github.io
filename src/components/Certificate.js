@@ -56,7 +56,7 @@ const Certificate = () => {
   return (
     <FullScreenSection
       id="certificate"
-      backgroundColor="#fdfdfd"
+      backgroundColor="#efebe4"
       color="#383842"
       px={8}
       py={10}
