@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 
-  const Items = [
+  const items = [
     {
       name: "About Me",
       sid: "#bio",
@@ -69,8 +69,8 @@ const Navbar = () => {
                 <HStack spacing={4}>
                   <Box pb={4} overflow="hidden" transition="0.3s ease">
                     <VStack spacing={4} alignItems="flex-start">
-                      {Items.map((Item) => (
-                        <a href={Item.sid}>{Item.name}</a>
+                      {items.map((item) => (
+                        <a href={item.sid}>{item.name}</a>
                       ))}
                     </VStack>
                   </Box>
@@ -82,8 +82,8 @@ const Navbar = () => {
       </nav>
       <nav>
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-          {Items.map((Item) => (
-            <a href={Item.sid}>{Item.name}</a>
+          {items.map((item) => (
+            <a href={item.sid}>{item.name}</a>
           ))}
         </HStack>
       </nav>
