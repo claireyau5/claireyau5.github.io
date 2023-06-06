@@ -92,6 +92,7 @@ const Bio = () => {
       </FullScreenSection>
       <WavyBreakLine
         svgTransform="rotateX(180deg)"
+        svgBgColor="#345b8f"
         pathD="M0,0 C 20,10 35,80 50,60 C 65,40 80,70 100,50 L 100,100 L 0,100 Z"
         pathFill={colorTheme}
       />

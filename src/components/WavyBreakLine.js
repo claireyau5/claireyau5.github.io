@@ -1,4 +1,4 @@
-const WavyBreakLine = ({svgTransform, pathD, pathFill}) => {
+const WavyBreakLine = ({ svgTransform, svgBgColor, pathD, pathFill }) => {
   return (
     <svg
       width="100%"
@@ -9,13 +9,11 @@ const WavyBreakLine = ({svgTransform, pathD, pathFill}) => {
         position: "relative",
         left: "0",
         right: "0",
-        transform: {svgTransform},
+        backgroundColor: svgBgColor,
+        transform: svgTransform,
       }}
     >
-      <path
-        d={pathD}
-        fill={pathFill}
-      />
+      <path d={pathD} fill={pathFill} />
     </svg>
   );
 };
