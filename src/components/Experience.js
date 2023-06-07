@@ -10,7 +10,7 @@ const experience = [
     date: "Apr 2023 - Present",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc mi. Nunc mattis enim ut tellus elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin sagittis. Eget mauris pharetra et ultrices neque ornare aenean. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Adipiscing commodo elit at imperdiet. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. At elementum eu facilisis sed odio morbi. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing.",
-    imageSrc: require("../images/MPC_front.JPG"),
+    imageSrc: require("../images/MPC_logo.png"),
   },
   {
     position: "Youth Mentor",
