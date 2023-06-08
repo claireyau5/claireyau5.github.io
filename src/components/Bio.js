@@ -20,14 +20,20 @@ const Bio = () => {
         position="relative"
       >
         <VStack spacing="20">
-          <Heading as="h1">Who Am I?</Heading>
+          <Heading as="h1">Who Is Claire Yau?</Heading>
           <Flex
+            flexDirection={{ lg: "row", base: "column-reverse" }}
             justifyContent="center"
             justifyItems="center"
             alignItems="center"
             gap={20}
           >
-            <Box w="50%" p={2} justifyContent="center" alignItems="center">
+            <Box
+              w={{ xl: "50%", base: "100%" }}
+              p={2}
+              justifyContent="center"
+              alignItems="center"
+            >
               <Image
                 src={require("../images/grad.jpeg")}
                 border="solid gray 2px"
@@ -35,7 +41,7 @@ const Bio = () => {
                 boxShadow="5px 10px #888888"
               />
             </Box>
-            <Box w="50%">
+            <Box w={{ xl: "50%", base: "100%" }}>
               <Text py={3}>
                 Claire Yau is a driven psychology enthusiast, passionate about
                 understanding the complexities of the human mind and the impact
@@ -57,12 +63,13 @@ const Bio = () => {
             </Box>
           </Flex>
           <Flex
+            flexDirection={{ lg: "row", base: "column" }}
             justifyContent="center"
             justifyItems="center"
             alignItems="center"
             gap={20}
           >
-            <Box w="50%">
+            <Box w={{ xl: "50%", base: "100%" }}>
               <Text py={3}>
                 As an active volunteer with organizations like Raise Foundation
                 and Lifeline, Claire puts her knowledge into practice by serving
@@ -79,7 +86,12 @@ const Bio = () => {
                 create a more mentally healthy society.
               </Text>
             </Box>
-            <Box w="50%" p={2} justifyContent="center" alignItems="center">
+            <Box
+              w={{ xl: "50%", base: "100%" }}
+              p={2}
+              justifyContent="center"
+              alignItems="center"
+            >
               <Image
                 src={require("../images/headspace.jpeg")}
                 border="solid gray 2px"

@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Image, VStack } from "@chakra-ui/react";
 import ExperienceItems from "./ExperienceItems";
 
 const experience = [
@@ -50,6 +50,7 @@ const Experience = () => {
       spacing={8}
     >
       <Heading as="h1">Experience</Heading>
+      <VStack spacing={8}>
         {experience.map((experienceItem) => (
           <ExperienceItems
             key={experienceItem.position}
@@ -60,6 +61,7 @@ const Experience = () => {
             imageSrc={experienceItem.imageSrc}
           />
         ))}
+      </VStack>
     </FullScreenSection>
   );
 };

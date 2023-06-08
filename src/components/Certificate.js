@@ -9,9 +9,12 @@ import {
   Modal,
   ModalBody,
   ModalContent,
+  ModalCloseButton,
   ModalOverlay,
   IconButton,
   useDisclosure,
+  useBreakpointValue,
+  HStack,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import FullScreenSection from "./FullScreenSection";
@@ -49,9 +52,11 @@ const Certificate = () => {
 
   const currentCertificate = certificates[currentIndex];
 
-  const imgaeBoxWidth = 0.8;
+  const imgaeBoxWidth = 1;
 
   const buttonBoxWidth = (1 - imgaeBoxWidth) / 2;
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <FullScreenSection
@@ -59,34 +64,41 @@ const Certificate = () => {
       backgroundColor="#efebe4"
       color="#383842"
       px={8}
-      py={10}
+      py={20}
       alignItems="center"
       justifyContent="center"
       spacing={8}
     >
-      <Box w="100%" position="relative">
+      <Box position="relative">
         <VStack spacing={10}>
           <Heading as="h1">Certifications</Heading>
-          <Flex justifyContent="center" alignItems="center" gap={20}>
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            gap={5}
+            flexDirection={"column"}
+          >
             <Box
               w={buttonBoxWidth}
               p={2}
               justifyContent="center"
               alignItems="center"
             >
-              <IconButton
-                color="#e2e8f0"
-                backgroundColor="#383842"
-                icon={<ChevronLeftIcon />}
-                aria-label="Previous Slide"
-                onClick={goToPrevSlide}
-                disabled={totalCertificates <= 1}
-                position="absolute"
-                left="0"
-                top="50%"
-                transform="translateY(-50%)"
-                _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
-              />
+              {!isMobile && (
+                <IconButton
+                  color="#e2e8f0"
+                  backgroundColor="#383842"
+                  icon={<ChevronLeftIcon />}
+                  aria-label="Previous Slide"
+                  onClick={goToPrevSlide}
+                  disabled={totalCertificates <= 1}
+                  position="absolute"
+                  left="0"
+                  top="50%"
+                  transform="translateY(-50%)"
+                  _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
+                />
+              )}
             </Box>
             <Box w="80%" p={2} justifyContent="center" alignItems="center">
               <Image
@@ -107,6 +119,7 @@ const Certificate = () => {
               <Modal size="2xl" onClose={onClose} isOpen={isOpen} isCentered>
                 <ModalOverlay />
                 <ModalContent>
+                <ModalCloseButton />
                   <ModalBody>
                     <Image src={currentCertificate.imageSrc} />
                   </ModalBody>
@@ -119,19 +132,36 @@ const Certificate = () => {
               justifyContent="center"
               alignItems="center"
             >
-              <IconButton
-                color="#e2e8f0"
-                backgroundColor="#383842"
-                icon={<ChevronRightIcon />}
-                aria-label="Next Slide"
-                onClick={goToNextSlide}
-                disabled={totalCertificates <= 1}
-                position="absolute"
-                right="0"
-                top="50%"
-                transform="translateY(-50%)"
-                _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
-              />
+              <HStack display={"flex"} justifyContent={"center"}>
+                {isMobile && (
+                  <IconButton
+                    color="#e2e8f0"
+                    backgroundColor="#383842"
+                    icon={<ChevronLeftIcon />}
+                    aria-label="Previous Slide"
+                    onClick={goToPrevSlide}
+                    disabled={totalCertificates <= 1}
+                    position="relative"
+                    left="0"
+                    top="50%"
+                    transform="translateY(-50%)"
+                    _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
+                  />
+                )}
+                <IconButton
+                  color="#e2e8f0"
+                  backgroundColor="#383842"
+                  icon={<ChevronRightIcon />}
+                  aria-label="Next Slide"
+                  onClick={goToNextSlide}
+                  disabled={totalCertificates <= 1}
+                  position={{ md: "absolute", base: "relative" }}
+                  right="0"
+                  top="50%"
+                  transform="translateY(-50%)"
+                  _hover={{ backgroundColor: "#e2e8f0", color: "#383842" }}
+                />
+              </HStack>
             </Box>
           </Flex>
         </VStack>

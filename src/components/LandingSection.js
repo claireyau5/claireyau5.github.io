@@ -7,10 +7,12 @@ const LandingSection = () => {
   return (
     <Box
       display="flex"
+      flexDirection={{xl:"row", base:"column"}}
+      alignItems={{xl:"stretch", base:"center"}}
+      justifyContent={{xl:"space-between", base:"center"}}
+      textAlign={{xl:"start", base:"center"}}
       flex="1 1 auto"
-      py={20}
-      px={5}
-      justifyContent="space-between"
+      p={10}
       minHeight="100vh"
       color="white"
       bg={`linear-gradient(to bottom, rgba(32,32,32,0.2), rgba(32,32,32,0.2)), url(${lbg})`}
@@ -19,7 +21,7 @@ const LandingSection = () => {
       <VStack
         spacing={5}
         p={5}
-        alignItems="flex-start"
+        alignItems={{xl:"flex-start", base:"center"}}
         justifyContent="top"
         position="relative"
       >
@@ -27,7 +29,7 @@ const LandingSection = () => {
         <Heading fontSize={"4xl"}>Psychology Graduate</Heading>
       </VStack>
       <VStack
-        w="40%"
+        w={{xl:"40%", base:"100%"}}
         spacing={5}
         p={5}
         alignItems="flex-end"
