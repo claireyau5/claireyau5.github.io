@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.afd7cedd.css",
-    "main.js": "/static/js/main.1d27f432.js",
+    "main.js": "/static/js/main.35de918f.js",
     "static/media/Lifeline_Logo.jpg": "/static/media/Lifeline_Logo.6b36295130cea0368bac.jpg",
     "static/media/ATSI_certificate.png": "/static/media/ATSI_certificate.134811af1f22bd2c06eb.png",
     "static/media/headspace.jpeg": "/static/media/headspace.85f2c5ac7169c1582c42.jpeg",
@@ -12,10 +12,10 @@
     "static/media/headspace_logo.jpg": "/static/media/headspace_logo.1f5676da5ec1c066c480.jpg",
     "index.html": "/index.html",
     "main.afd7cedd.css.map": "/static/css/main.afd7cedd.css.map",
-    "main.1d27f432.js.map": "/static/js/main.1d27f432.js.map"
+    "main.35de918f.js.map": "/static/js/main.35de918f.js.map"
   },
   "entrypoints": [
     "static/css/main.afd7cedd.css",
-    "static/js/main.1d27f432.js"
+    "static/js/main.35de918f.js"
   ]
 }
