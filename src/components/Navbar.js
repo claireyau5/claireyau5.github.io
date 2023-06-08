@@ -6,7 +6,6 @@ import {
   HStack,
   VStack,
   useToast,
-  Tooltip,
   Collapse,
   useBreakpointValue,
   useDisclosure,
