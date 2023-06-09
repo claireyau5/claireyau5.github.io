@@ -29,7 +29,7 @@ const LandingSection = () => {
         justifyContent="top"
         position="relative"
       >
-        <Heading fontFamily={"Alex Brush, cursive"} fontSize={"9xl"}>
+        <Heading fontFamily={"Alex Brush, cursive"} fontSize={"8xl"}>
           {name}
         </Heading>
         <Heading fontSize={"4xl"}>{occupation}</Heading>
