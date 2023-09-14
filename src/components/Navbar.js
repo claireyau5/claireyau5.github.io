@@ -28,10 +28,10 @@ const Navbar = () => {
       name: "Experience",
       sid: "#experience",
     },
-    {
-      name: "Research",
-      sid: "#research",
-    },
+    // {
+    //   name: "Research",
+    //   sid: "#research",
+    // },
     {
       name: "Certifications",
       sid: "#certificate",
