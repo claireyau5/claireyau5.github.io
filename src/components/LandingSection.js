@@ -5,7 +5,7 @@ import lbg from "../images/lbg.jpeg";
 const name = "Claire Yau";
 const occupation = "Psychology Graduate";
 const introText =
-  "Passionate at becoming a clinical psychologist, where she can help individuals overcome mental health challenges and live fulfilling lives. With her educational background in psychology and her experience in patient care, Claire is dedicated to reducing the stigma surrounding mental health and promoting access to psychological services.";
+  "Passionate about becoming a clinical psychologist, Claire aims to help individuals overcome mental health challenges and live fulfilling lives. With her educational background in psychology and her experience in patient care, Claire is dedicated to reducing the stigma surrounding mental health and promoting access to psychological services.";
 
 const LandingSection = () => {
   return (
