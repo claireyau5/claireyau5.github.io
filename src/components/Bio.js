@@ -7,13 +7,13 @@ const Bio = () => {
   const colorTheme = "#efebe4";
 
   const firstPara =
-    "Claire Yau is a driven psychology enthusiast, passionate about understanding the complexities of the human mind and the impact of behavior on mental health. Her educational background includes a Bachelor of Psychology (Hons) degree from the Australian National University (ANU), where she gained a comprehensive understanding of the theories and applications of psychology.";
+    "Claire Yau's fascination with the intricacies of the human psyche is evident in both her academic and professional pursuits. Holding a Bachelor of Psychology (Hons) degree from the Australian National University (ANU), Claire has deeply explored the nuances of psychological theories and their real-world applications.";
   const secondPara =
-    "Currently working as a Patient Journey Coordinator at the Melbourne Psychiatry Centre, Claire is dedicated to providing patients with the resources and support they need to navigate the healthcare system and receive the best possible care. Her work has inspired her to pursue a career as a clinical psychologist, where she hopes to work directly with patients to provide evidence-based treatments and interventions.";
+    "In her role as a Patient Journey Coordinator at the Melbourne Psychiatry Centre, Claire assists patients in navigating the intricate healthcare system, ensuring they receive optimal care. This experience has further solidified her aspiration to become a clinical psychologist, where she envisions herself offering evidence-based therapeutic interventions.";
   const thridPara =
-    "As an active volunteer with organizations like Raise Foundation and Lifeline, Claire puts her knowledge into practice by serving as a mentor and crisis supporter. Her commitment to promoting mental health awareness has also led her to volunteer with Headspace and ANU Thrive, where she worked to raise awareness and encourage wellbeing on campus.";
+    "Outside the professional realm, Claire actively contributes to the community. She mentors and serves as a crisis supporter with organizations like the Raise Foundation and Lifeline. Her advocacy for mental health has also led her to roles with Headspace and ANU Thrive, championing mental health awareness and fostering wellbeing among students.";
   const forthPara =
-    "With her passion for psychology and her desire to help others, Claire strives to promote access to psychological services and resources for everyone. She believes that by providing support and resources to those in need, we can all work together to create a more mentally healthy society.";
+    "Claire's unwavering commitment to psychology is rooted in her mission: ensuring everyone can access vital psychological resources and support. In promoting these services, she is driven by the conviction that together, we can forge a mentally healthier society.";
 
   return (
     <>
@@ -29,7 +29,7 @@ const Bio = () => {
         position="relative"
       >
         <VStack spacing="20">
-          <Heading as="h1">Who Is Claire Yau?</Heading>
+          <Heading as="h1">About Claire Yau</Heading>
           <Flex
             flexDirection={{ lg: "row", base: "column-reverse" }}
             justifyContent="center"
